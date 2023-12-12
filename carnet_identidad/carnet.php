@@ -128,7 +128,7 @@
 
             <center><h3>CEDULA DE IDENTIDAD</h3></center>
 
-            <center><img src=<?php echo "img/$archivo" ?>alt="Descripción de la imagen"></center>
+            <center><img src=<?php echo $archivo ?> ></center>
 
                 <div class = "rut">
                     <center><p>Run: <?php echo $rut ?></p></center>
