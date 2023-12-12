@@ -25,7 +25,7 @@ function crear_carnet($conexion, $nombres, $apellido_paterno, $apellido_materno,
     // Ejecutar la consulta
     $resultado = mysqli_query($conexion, $sql);
     if ($resultado){
-        //echo "Se inserto correctamente el alumno. <br>";
+        //echo "Se inserto correctamente el carnet. <br>";
         return True;
     }else{
         //echo "Error al insertar dato. <br>";
@@ -37,11 +37,11 @@ function crear_carnet($conexion, $nombres, $apellido_paterno, $apellido_materno,
 
 $nombre_archivo = subir_archivo($_FILES["archivo"]);
 if ($nombre_archivo){
-    $resultado_agregar_alumno = crear_carnet($conexion, $_POST["nombres"], $_POST["apellido_paterno"], $_POST["apellido_materno"], $_POST["rut"], $_POST["nacionalidad"], $_POST["genero"], $_POST["fecha_nacimiento"], $_POST["lugar_de_nacimiento"], $_POST["profesion"], $_POST["discapacidad"], $_POST["donante"], $nombre_archivo);
-    if ($resultado_agregar_alumno) {
-        echo "Se añadió alumno correctamente <br>";
+    $resultado_agregar_carnet = crear_carnet($conexion, $_POST["nombres"], $_POST["apellido_paterno"], $_POST["apellido_materno"], $_POST["rut"], $_POST["nacionalidad"], $_POST["genero"], $_POST["fecha_nacimiento"], $_POST["lugar_de_nacimiento"], $_POST["profesion"], $_POST["discapacidad"], $_POST["donante"], $nombre_archivo);
+    if ($resultado_agregar_carnet) {
+        echo "Se añadió el carnet correctamente <br>";
     }else{
-        echo "Error al añadir alumno <br>";
+        
     }
 }else{
     echo "Falló al mover el archivo <br>";
